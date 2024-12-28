@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!--基础设定-->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+    <!--基本外观-->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>电话微波炉(暂定）</title>
+    <meta name="description" content="网站建设ing~">
+    <meta name="author" content="shenshimiao">
+    <!--无障碍或体验优化-->
+    <meta name="viewport" content="width=device-width">
+    <!--待设 字体-->
+  </head>
+  <body>
+    <!--HTML 文本处理基础-->
+    <h1>web日志(鸽了，等我学完估计也懒得补了）</h1>
+    <p>以下用于记录并实际操作.</p>
+    <h2>-----文本处理-----</h2>
+    <h3>有序列表</h3>
+    <ol>
+      <li>+1=</li>
+      <li></li>
+    </ol>
+    <h3>无序列表</h3>
+    <ul>
+      <li><em>强调</em></li>
+      <li><strong>强烈的重要性</strong></li>
+
+    </ul>
+    <!--创建超链接-->
+    <h2>-----创建链接-----</h2>
+    <h3>文档片段</h3>
+    上标和下标<a href="#上标和下标"><sup id="文档片段">[1]</sup></a><!--碍眼的下横线能不能想想办法（）-->
+    <h3>图片</h3>
+    <figure>
+      <a target="_blank" href="https://www.pixiv.net/artworks/113932992" title="讨厌！在摸哪里啊！">
+        <img src="images/rurudo-lion.jpg" alt="rurudo lion" width="849" height="1200">
+      </a>
+      <figcaption>rurudo lion</figcaption>
+    </figure>
+    <h3>绝对URL</h3>
+    <a target="_blank" href="https://shenshi-miao.github.io/test-page/index.html">My test page</a>
+    <h3>相对URL</h3>
+    <a target="_blank" href="../test-page/index.html">My test page</a>
+    <!--文本格式进阶-->
+    <h2>-----描述列表-----</h2>
+    <dl>
+      <dt><strong>引用</strong></dt>
+      <dd>块引用:<blockquote cite="URL">默认样式会将其呈现为缩进的段落</blockquote></dd>
+      <dd>行内引用<q cite="URL">默认将其作为普通文本放入引号内表示引用</q></dd>
+      <dd>引文<a href="URL"><cite>引文默认的字体样式为斜体</cite></a></dd>
+      <dt><strong>缩略语</strong></dt>
+      <dd> 我们使用<abbr title="超文本标记语言(Hyper text Markup Language)">HTML</abbr>来组织网页文档。</dd>
+      <dt><strong>标记联络方式</strong></dt>
+      <dd><address>由 <a href="https://github.com/shenshi-miao">shenshi-miao</a> 编写的页面。</address></dd>
+      <dt><strong>上标和下标</strong></dt>
+      <dd>1. <a href="#文档片段" id="上标和下标">↑</a> 运用例</dd>
+      <dt><strong>展示计算机代码</strong></dt>
+      <dd>
+        code:<code>&lt;code&gt;</code><br>
+        pre:<pre>          pre          </pre>
+        var:<var>x+y=z</var><br>
+        kbd:<kbd>Ctrl+V</kbd><br>
+        samp:<samp>用于标记计算机程序的输出。(?</samp>
+      </dd>
+      <dt><strong>标记时间和日期</strong></dt>  
+      <dd><time datetime="2024-12-10">2024 年 12 月 10 日</time></dd>
+    </dl>
+    <hr>
+    <!--文档与网站架构-->
+    <h2>文档的基本组成部分</h2>
+    <dl>
+      <dt><strong>header(页眉)</strong></dt>
+      <dd>如果它是&lt;body&gt;的子元素，那么就是网站的全局页眉</dd>
+      <dd>如果它是&lt;article&gt;或&lt;section&gt;的子元素，那么它是这些部分特有的页眉</dd>
+      <dt><strong>nav(导航栏)</strong></dt>
+      <dd>包含页面主导航功能。其中不应包含二级链接等内容</dd>
+      <dt><strong>main(主内容)</strong></dt>
+      <dd>还可以有各种子内容区段，可用
+        <ul>
+          <li>&lt;article&gt;:包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）</li>
+          <li>&lt;section&gt;:与 &lt;article&gt;类似，但&lt;section&gt;更适用于组织页面使其按功能分块</li>
+          <li>&lt;div&gt;:是一个块级无语义元素，应仅用于找不到更好的块级元素时，或者不想增加特定的意义时</li>
+        </ul>
+      </dd>
+      <dt><strong>aside(侧边栏)</strong></dt>
+      <dd>经常嵌套在 &lt;main&gt; 中,包含一些间接信息（术语条目、作者简介、相关链接，等等）</dd>
+      <dt><strong>footer(页脚)</strong></dt>
+      <dd>包含了页面的页脚部分</dd>
+    </dl>  
+    <hr>
+    <!--HTML调试-->
+    <h2><a target="_blank" href="https://validator.w3.org/">HTML验证</a></h2>
+    <hr>
+    <!--HTML中的图片-->
+    <h2>HTML中的图片</h2>
+    <h3>宽度和高度</h3>
+    <p>width和height属性指定图片的实际大小,在下载之前浏览器就知道需要为其留出多少空间,但不应该用来调整图片的大小。</p>
+    <h3>通过为图片搭配说明文字的方式来解说图片</h3>
+    <p>figcaption元素告诉浏览器和辅助技术工具,这段说明文字描述了figure元素的内容</p>
+    <h3>CSS 背景图片</h3>
+    <p>CSS 背景图片只是为了装饰,可以更好地控制图片和设置图片的位置,但是这样插入的图片完全没有语义上的意义</p>
+    <hr>
+    <!--视频和音频内容-->
+    <h2>web 中的音频和视频</h2>
+    <h3>audio</h3>
+    <audio controls preload="auto">
+      <source src="audio/shana.mp3" type="audio/mp3">
+      <source src="audio/shana.ogg" type="audio/ogg">
+      <p>你的浏览器不支持该音频，可点击<a href="audio/shana.mp3">此链接</a>收听。</p>
+    </audio>
+    <h3>video</h3>
+    <video controls muted preload="auto" width="1335" height="600" poster="images/neuro.jpg">
+      <source src="video/neuro.mp4" type="video/mp4">
+      <source src="video/neuro.webm" type="video/webm">
+      <p>你的浏览器不支持此视频。可点击<a href="video/neuro.mp4">此链接</a>观看</p>
+    </video>
+    <h3>显示视频文本(待完成</h3>
+    <hr>
+    <!---->
+    <h2>从 object 到 iframe——其他嵌入技术(可能得等js?)</h2>
+    <h3>看不懂</h3>
+    <h3>不会用</h3>
+    <h3>用不上</h3>
+    <hr>
+    <!---->
+    <h2>向 web 中添加矢量图形(懒,先学css)</h2>
+    <h3>同上...</h3>
+    <hr>
+    <!---->
+    <h2>响应式图片(等css)</h2>
+    <h3>上面这些之后再搞也没问题</h3>
+    <hr>
+    <!--HTML 表格-->
+    <h2>HTML表格(等css了只能)(...还得等)</h2>
+    <h3>萌战</h3>
+    <div class="table">
+      <table>
+        <caption><strong>日萌（动画最萌大会）</strong></caption>
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col span="2">
+          <col span="4">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">年份</th>
+            <th scope="col">萌王</th>
+            <th scope="col">准萌</th>
+            <th scope="col" colspan="2">半决赛选手</th>
+            <th scope="col" colspan="4">四分之一决赛选手</th>
+            <th scope="col">日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2002</td>
+            <td>木之本樱</td>
+            <td>春日步</td>
+            <td>春风DoReMi</td>
+            <td>大道寺知世</td>
+            <td>花丘伊莎美</td>
+            <td>光月未梦</td>
+            <td>椎名翼</td>
+            <td>植松小星</td>
+            <td>2002-03-25~09-22</td>
+          </tr>
+          <tr>
+            <td>2003</td>
+            <td>原田梨红</td>
+            <td>原素子</td>
+            <td>艾克蕾尔</td>
+            <td>结崎雏乃</td>
+            <td>菊8号</td>
+            <td>本庄美风</td>
+            <td>苗木野空</td>
+            <td>篠冢岚</td>
+            <td>2003-04-20~06-29</td>
+          </tr>
+          <tr>
+            <td>2004</td>
+            <td>罗兹玛丽·阿普罗菲鲁特</td>
+            <td>娜嘉</td>
+            <td>露娜</td>
+            <td>水树玛依亚</td>
+            <td>艾莉诺雅·贝克</td>
+            <td>美墨渚</td>
+            <td>苗木野空</td>
+            <td>兰花·法兰波瓦兹</td>
+            <td>2004-08-30~09-26</td>
+          </tr>
+          <tr>
+            <td>2005</td>
+            <td>高町奈叶</td>
+            <td>苍星石</td>
+            <td>真红</td>
+            <td>蕾·米</td>
+            <td>神奈备命</td>
+            <td>藤乃静留</td>
+            <td>玖我夏树</td>
+            <td>桂圣奈</td>
+            <td>2005-08-23~11-13</td>
+          </tr>
+          <tr>
+            <td>2006</td>
+            <td>翠星石</td>
+            <td>菲特·泰斯特罗莎·哈拉温</td>
+            <td>源千华留	</td>
+            <td>夏娜</td>
+            <td>艾露露</td>
+            <td>长门有希</td>
+            <td>泽近爱理</td>
+            <td>远坂凛</td>
+            <td>2006-07-01~10-28</td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td>古手梨花</td>
+            <td>三千院凪</td>
+            <td>龙宫礼奈</td>
+            <td>真红</td>
+            <td>露易丝</td>
+            <td>柊司</td>
+            <td>泉此方</td>
+            <td>高町奈叶</td>
+            <td>2007-07-01~11-03</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>柊镜</td>
+            <td>柊司</td>
+            <td>桂雏菊</td>
+            <td>古河渚</td>
+            <td>伊吹风子</td>
+            <td>川添珠姬</td>
+            <td>坂上智代</td>
+            <td>千叶纪梨乃</td>
+            <td>2008-06-23~11-02</td>
+          </tr>
+          <tr>
+            <td>2009</td>
+            <td>逢坂大河</td>
+            <td>平泽唯</td>
+            <td>原村和</td>
+            <td>福路美穗子</td>
+            <td>天江衣</td>
+            <td>鹭之宫伊澄</td>
+            <td>露易丝</td>
+            <td>片冈优希</td>
+            <td>2009-06-20~10-17</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>中野梓</td>
+            <td>三千院凪</td>
+            <td>天江衣</td>
+            <td>原村和</td>
+            <td>椎名真冬</td>
+            <td>佐天泪子</td>
+            <td>夏娜</td>
+            <td>山田葵</td>
+            <td>2010-06-26~10-16</td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td>巴麻美</td>
+            <td>佐仓杏子</td>
+            <td>鹿目圆</td>
+            <td>艾莉卡·哈特曼</td>
+            <td>乌贼娘</td>
+            <td>五更瑠璃</td>
+            <td>美树沙耶香</td>
+            <td>亚斯塔露蒂·尤各瓦尔</td>
+            <td>2011-06-23~11-05</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>园城寺怜</td>
+            <td>松实玄</td>
+            <td>原村和</td>
+            <td>竹井久</td>
+            <td>夏娜</td>
+            <td>露易丝</td>
+            <td>松实宥</td>
+            <td>宫永咲</td>
+            <td>2012-05-25~11-03</td>
+          </tr>
+          <tr>
+            <td>2013</td>
+            <td>鹿目圆</td>
+            <td>美树沙耶香</td>
+            <td>佐仓杏子</td>
+            <td>人类小姐</td>
+            <td>五更瑠璃</td>
+            <td>巴麻美</td>
+            <td>岁纳京子</td>
+            <td>筒隐月子</td>
+            <td>2013-06-09~11-19</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>宫永咲&原村和</td>
+            <td>&nbsp;</td>
+            <td>美树沙耶香</td>
+            <td>高鸭稳乃</td>
+            <td>晓美焰</td>
+            <td>佐仓杏子</td>
+            <td>园城寺怜</td>
+            <td>松实玄</td>
+            <td>2014-05-26~11-23</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="10">最萌三原则
+              <ol>
+                <li>萌有千差万别，各人都有自己的萌</li>
+                <li>不能因为自己的萌而去刻意否认他人的萌</li>
+                <li>赌上荣耀，为自己的萌投上干净的一票</li>
+              </ol></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>  
+    <table>
+      <caption><strong>世萌（国际最萌大会）</strong></caption>
+    </table>
+    <table>
+      <caption><strong>R萌(Best Girl Contest)</strong></caption>
+    </table>
+
+
+
+
+
+    <!--测试区域-->
+ 
+  
+    
+    <!--测试区域-->
+
+
+
+  </body>
+</html>
+<!--    http://localhost:8080/index.html    -->
